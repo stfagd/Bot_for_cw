@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: language-teacher-bot
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: 1234
+    driver-class-name: org.postgresql.Driver
+
+server:
+  port: 8082
+
+telegram:
+  bot:
+    token: ${TELEGRAM_BOT_TOKEN:}
+    username: LearnCardChinese
+
+admin:
+  service:
+    url: http://localhost:8081
+
+logging:
+  level:
+    com.example.languageteacherbot: DEBUG
+    org.telegram: INFO

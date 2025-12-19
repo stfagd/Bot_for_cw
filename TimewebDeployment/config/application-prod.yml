@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/language_bot
+    username: bot_user
+    password: ${DATABASE_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+telegram:
+  bot:
+    token: ${TELEGRAM_BOT_TOKEN}
+
+server:
+  port: 8080
+
+logging:
+  level:
+    com.example.languageteacherbot: INFO
+    org.springframework: WARN
